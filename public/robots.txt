@@ -1,0 +1,17 @@
+# Portela Alineaciones - Taller de Alineación y Balanceo Montevideo
+# https://portela-alineaciones.vercel.app/
+
+# Allow all search engines to crawl the site
+User-agent: *
+Allow: /
+
+# Disallow admin and sensitive areas (if any)
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemap location
+Sitemap: https://portela-alineaciones.vercel.app/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 10
+

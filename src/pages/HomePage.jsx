@@ -119,11 +119,11 @@ export default function HomePage() {
                 <ImageCarousel />
 
                 {/* Sección de Servicios */}
-                <section id="servicios" className="py-16 sm:py-24 bg-white">
+                <section id="servicios" className="py-16 sm:py-24 bg-white" aria-labelledby="servicios-heading">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="text-center">
-                            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">Nuestros Servicios</h2>
-                            <p className="mt-4 text-lg text-gray-600">Soluciones integrales para tu auto.</p>
+                            <h2 id="servicios-heading" className="text-3xl font-extrabold text-gray-900 sm:text-4xl">Nuestros Servicios de Alineación y Balanceo</h2>
+                            <p className="mt-4 text-lg text-gray-600">Soluciones integrales para tu auto en Montevideo. Taller especializado con equipamiento de última generación.</p>
                         </div>
                         <div className="mt-12 grid grid-cols-2 gap-4 sm:gap-6 md:gap-8 md:grid-cols-2 lg:grid-cols-4">
                             {services.map((service) => (
@@ -139,35 +139,23 @@ export default function HomePage() {
                 </section>
 
                 {/* Sección de Cursos */}
-                <section id="cursos" className="py-16 sm:py-24 bg-gray-50">
+                <section id="cursos" className="py-16 sm:py-24 bg-gray-50" aria-labelledby="cursos-heading">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="text-center mb-12">
-                            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">Cursos de Capacitación</h2>
-                            <p className="mt-4 text-lg text-gray-600">Formación profesional en alineación y balanceo vehicular</p>
+                            <h2 id="cursos-heading" className="text-3xl font-extrabold text-gray-900 sm:text-4xl">Curso de Alineación y Capacitación Profesional</h2>
+                            <p className="mt-4 text-lg text-gray-600">Formación profesional en alineación y balanceo vehicular en Montevideo. Aprende técnicas de alineación computarizada con equipamiento de última generación.</p>
                         </div>
 
                         <div className="space-y-6 mb-12">
-                            <CourseCard
-                                icon={<WrenchScrewdriverIcon className="h-6 w-6" />}
-                                title="Curso de Alineación"
-                                description="Aprende los fundamentos de la alineación vehicular, conceptos de geometría de dirección, ángulos, diagnóstico y resolución de problemas."
-                                duration="30 horas"
-                            // level="Todos los niveles"
-                            />
-                            {/* <CourseCard
-                                icon={<AcademicCapIcon className="h-6 w-6" />}
-                                title="Curso Avanzado de Alineación 3D"
-                                description="Domina el uso de equipos de alineación computarizada, diagnóstico avanzado y reparación de sistemas de suspensión."
-                                duration="8 semanas"
-                                level="Avanzado"
-                            />
-                            <CourseCard
-                                icon={<UsersIcon className="h-6 w-6" />}
-                                title="Taller de Balanceo Especializado"
-                                description="Técnicas profesionales de balanceo dinámico, diagnóstico de vibraciones y mantenimiento preventivo."
-                                duration="3 semanas"
-                                level="Intermedio"
-                            /> */}
+                            <article itemScope itemType="https://schema.org/Course">
+                                <CourseCard
+                                    icon={<WrenchScrewdriverIcon className="h-6 w-6" />}
+                                    title="Curso de Alineación"
+                                    description="Aprende los fundamentos de la alineación vehicular, conceptos de geometría de dirección, ángulos, diagnóstico y resolución de problemas."
+                                    duration="30 horas"
+                                // level="Todos los niveles"
+                                />
+                            </article>
                         </div>
 
                         {/* Información adicional de cursos */}
@@ -180,10 +168,6 @@ export default function HomePage() {
                                             <span className="text-taller-red mr-2">✓</span>
                                             <span><strong>Clases teóricas y prácticas:</strong> Combinamos teoría con experiencia y práctica en nuestro taller</span>
                                         </li>
-                                        {/* <li className="flex items-start">
-                                            <span className="text-taller-red mr-2">✓</span>
-                                            <span><strong>Grupos reducidos:</strong> Máximo 8 estudiantes por curso para atención personalizada</span>
-                                        </li> */}
                                         <li className="flex items-start">
                                             <span className="text-taller-red mr-2">✓</span>
                                             <span><strong>Certificación:</strong> Recibe un certificado de nuestra empresa al completar el curso</span>
@@ -228,7 +212,7 @@ export default function HomePage() {
                 </section>
 
                 {/* Sección "Por qué elegirnos" */}
-                <section id="nosotros" className="py-16 sm:py-24 bg-white">
+                <section id="nosotros" className="py-16 sm:py-24 bg-white" aria-labelledby="nosotros-heading">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                         {/* Contenido Superior: Imagen + Texto */}
@@ -239,23 +223,24 @@ export default function HomePage() {
                                 <img
                                     className="w-full h-auto rounded-lg shadow-xl"
                                     src="/images/shop/shop-background.jpg"
-                                    alt="Taller de Portela Alineaciones"
+                                    alt="Taller de alineación y balanceo Portela Alineaciones"
+                                    loading="lazy"
                                 />
                             </div>
 
                             {/* Columna de Texto */}
                             <div>
-                                <h2 className="text-3xl font-extrabold text-taller-blue sm:text-4xl">
-                                    ¿Por Qué Confiar en Nosotros?
+                                <h2 id="nosotros-heading" className="text-3xl font-extrabold text-taller-blue sm:text-4xl">
+                                    ¿Por Qué Confiar en Nuestro Taller de Alineación?
                                 </h2>
                                 <p className="mt-4 text-lg text-gray-700">
-                                    Con una trayectoria de más de 25 años en el rubro automotor, instalados en un moderno local, en una zona estratégica en el Centro de Montevideo, Portela Alineaciones brinda un servicio de excelente calidad, rápido y personalizado.
+                                    Con una trayectoria de más de 25 años en el rubro automotor, instalados en un moderno local en una zona estratégica en el Centro de Montevideo, <strong>Portela Alineaciones</strong> brinda un servicio de excelente calidad en <strong>alineación y balanceo</strong>, rápido y personalizado.
                                 </p>
                                 <p className="mt-2 text-lg text-gray-700">
-                                    Contamos con equipamiento de última tecnología, y ofrecemos productos de primera línea, que garantizan el óptimo funcionamiento de su vehículo.
+                                    Contamos con <strong>equipamiento Ravaglioli</strong> de última tecnología, y ofrecemos productos de primera línea, que garantizan el óptimo funcionamiento de su vehículo.
                                 </p>
                                 <p className="mt-2 text-lg text-gray-700">
-                                    Servicios para empresas, atención de flotas y formación de personal.
+                                    Servicios para empresas, atención de flotas y formación de personal. Especialistas en alineación computarizada y balanceo de ruedas en Montevideo.
                                 </p>
                             </div>
                         </div>

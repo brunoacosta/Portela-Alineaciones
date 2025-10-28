@@ -17,17 +17,17 @@ export default function Header() {
                 <div className="flex items-center justify-between h-16 md:h-20">
                     {/* Logo */}
                     <div className="flex-shrink-0">
-                        <a href="#inicio" className="flex items-center">
+                        <a href="#inicio" className="flex items-center" aria-label="Portela Alineaciones - Taller de Alineación y Balanceo">
                             <img
                                 src="/images/logo/portela-logo.png"
-                                alt="Portela Alineaciones"
+                                alt="Logo Portela Alineaciones - Taller de Alineación y Balanceo Montevideo"
                                 className="h-12 md:h-16 w-auto"
                             />
                         </a>
                     </div>
 
                     {/* Menú de Navegación - Escritorio */}
-                    <nav className="hidden md:block">
+                    <nav className="hidden md:block" aria-label="Navegación principal">
                         <div className="ml-10 flex items-baseline space-x-4">
                             <NavLink href="#inicio">Inicio</NavLink>
                             <NavLink href="#servicios">Servicios</NavLink>

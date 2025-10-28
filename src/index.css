@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@theme {
+    --color-taller-blue: #0061af;
+    --color-taller-red: #e0122c;
+}
